@@ -1,13 +1,14 @@
 import React from 'react';
-import ContainerStyled from '../../common/Container/Container.styled';
+
+import Container from 'common/Container/Container';
 import { HeaderStyled, HeaderWrapper, UserBtnWrapper } from './Header.styled';
 import Logo from './components/Logo/Logo';
-import Button from '../../common/Button/Button';
+import Button from 'common/Button/Button.styled';
 
 const Header = () => {
 	return (
 		<>
-			<ContainerStyled>
+			<Container>
 				<HeaderStyled>
 					<HeaderWrapper>
 						<Logo />
@@ -17,7 +18,7 @@ const Header = () => {
 						</UserBtnWrapper>
 					</HeaderWrapper>
 				</HeaderStyled>
-			</ContainerStyled>
+			</Container>
 		</>
 	);
 };
