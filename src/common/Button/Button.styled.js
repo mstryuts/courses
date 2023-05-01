@@ -15,6 +15,8 @@ const pulse = keyframes`
 `;
 
 const Button = styled.button`
+	width: auto;
+	max-width: 150px;
 	background-color: black;
 	color: white;
 	border: none;

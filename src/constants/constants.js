@@ -1,4 +1,4 @@
-export const mockedCoursesList = [
+export const MOCKED_COURSES_LIST = [
 	{
 		id: 'de5aaa59-90f5-4dbc-b8a9-aaf205c551ba',
 		title: 'JavaScript',
@@ -23,7 +23,7 @@ export const mockedCoursesList = [
 	},
 ];
 
-export const mockedAuthorsList = [
+export const MOCKED_AUTHORS_LIST = [
 	{
 		id: '27cc3006-e93a-4748-8ca8-73d06aa93b6d',
 		name: 'Vasiliy Dobkin',
@@ -41,3 +41,11 @@ export const mockedAuthorsList = [
 		name: 'Valentina Larina',
 	},
 ];
+
+export const BUTTON_TEXT_LOGOUT = 'Logout';
+export const BUTTON_TEXT_SHOW_COURSE = 'Show course';
+export const BUTTON_TEXT_SEARCH = 'Search';
+export const COURSE_DURATION_TITLE = 'Duration:';
+export const COURSE_CREATED_DATE_TITLE = 'Creation Date:';
+export const COURSE_AUTHORS_TITLE = 'Authors:';
+export const USER_DUMMY_HEADER_NAME = 'Name';

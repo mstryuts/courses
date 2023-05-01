@@ -2,7 +2,11 @@ import PropTypes from 'prop-types';
 import ButtonStyled from './Button.styled';
 
 const Button = ({ buttonText, onClick }) => {
-	return <ButtonStyled onClick={onClick}>{buttonText}</ButtonStyled>;
+	return (
+		<ButtonStyled type='submit' onClick={onClick}>
+			{buttonText}
+		</ButtonStyled>
+	);
 };
 
 Button.propTypes = {

@@ -1,6 +1,19 @@
 import React from 'react';
-import { formatCreationDate } from 'utils/formatCreationDate';
-import { formatDuration } from 'utils/formatDuration';
+import { formatCreationDate, formatDuration } from 'utils';
+import Button from 'common/Button/Button';
+import {
+	CardWrapper,
+	CourseInfo,
+	CourseTitle,
+	CourseInfoItemTitle,
+	CourseInfoItemValue,
+} from './CourseCard.styled';
+import {
+	BUTTON_TEXT_SHOW_COURSE,
+	COURSE_CREATED_DATE_TITLE,
+	COURSE_AUTHORS_TITLE,
+	COURSE_DURATION_TITLE,
+} from 'constants';
 
 const CourseCard = ({
 	authors,
@@ -13,20 +26,24 @@ const CourseCard = ({
 	const formattedDuration = formatDuration(duration);
 	return (
 		<>
-			<div>
+			<CardWrapper>
 				<div>
-					<h2>{title}</h2>
+					<CourseTitle>{title}</CourseTitle>
 					<p>{description}</p>
 				</div>
-				<div>
-					<strong>Authors:</strong>
+				<CourseInfo>
+					<b>{COURSE_AUTHORS_TITLE}</b>
 					<p>{authors}</p>
-					<strong>Duration:</strong>
+
+					<b>{COURSE_DURATION_TITLE}</b>
 					<p>{formattedDuration}</p>
-					<strong>Creation Date:</strong>
+
+					<b>{COURSE_CREATED_DATE_TITLE}</b>
 					<p>{formattedCreationDate}</p>
-				</div>
-			</div>
+
+					<Button buttonText={BUTTON_TEXT_SHOW_COURSE} />
+				</CourseInfo>
+			</CardWrapper>
 		</>
 	);
 };

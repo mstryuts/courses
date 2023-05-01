@@ -1,16 +1,12 @@
-import { useState } from 'react';
 import Header from './components/Header/Header';
 import Courses from './components/Courses/Courses';
-import { mockedCoursesList, mockedAuthorsList } from './constants';
+import CreateCourse from 'components/CreateCourse/CreateCourse';
 
 const App = () => {
-	const [courses, setCourses] = useState(mockedCoursesList);
-	const [authors, setAuthors] = useState(mockedAuthorsList);
-
 	return (
 		<>
 			<Header />
-			<Courses coursesList={courses} authorsList={authors} />
+			<Courses />
 		</>
 	);
 };
