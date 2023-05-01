@@ -10,24 +10,31 @@ const Courses = () => {
 	const [authors, setAuthors] = useState(MOCKED_AUTHORS_LIST);
 	const [inputValue, setInputValue] = useState('');
 
-	const coursesWithAuthors = courses.map((course) => {
-		const authorNames = course.authors
-			.map((authorId) => {
-				const author = authors.find((a) => a.id === authorId);
-				return author ? author.name : '';
-			})
-			.join(', ');
-		return { ...course, authorNames };
-	});
+	function getAuthorNameById(authorId) {
+		const author = MOCKED_AUTHORS_LIST.find((a) => a.id === authorId);
+		return author ? author.name : '';
+	}
+
+	// const coursesWithAuthors = courses.map((course) => {
+	// 	const authorNames = course.authors
+	// 		.map((authorId) => {
+	// 			const author = authors.find((a) => a.id === authorId);
+	// 			return author ? author.name : '';
+	// 		})
+	// 		.join(', ');
+	// 	return { ...course, authorNames };
+	// });
 
 	function handleInputChange(event) {
 		console.log(event);
 		setInputValue(event.target.value);
 	}
 
-	function handleSubmit(event) {
-		event.preventDefault();
-		console.log('Input value:', inputValue);
+	function filterCourses(event) {
+		const filteredCourses = MOCKED_COURSES_LIST.filter((course) =>
+			course.title.toLowerCase().includes(inputValue.toLowerCase())
+		);
+		setCourses(filteredCourses);
 	}
 
 	return (
@@ -35,13 +42,15 @@ const Courses = () => {
 			<CoursesStyled>
 				<SearchBar
 					onChange={handleInputChange}
-					onClick={handleSubmit}
+					onClick={filterCourses}
 					inputValue={inputValue}
 				/>
-				{coursesWithAuthors.map((course) => (
+				{courses.map((course) => (
 					<CourseCard
 						key={course.id}
-						authors={course.authorNames}
+						authors={course.authors
+							.map((authorId) => getAuthorNameById(authorId))
+							.join(', ')}
 						creationDate={course.creationDate}
 						description={course.description}
 						duration={course.duration}
