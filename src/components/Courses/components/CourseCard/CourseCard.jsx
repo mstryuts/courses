@@ -1,13 +1,7 @@
 import React from 'react';
 import { formatCreationDate, formatDuration } from 'utils';
 import Button from 'common/Button/Button';
-import {
-	CardWrapper,
-	CourseInfo,
-	CourseTitle,
-	CourseInfoItemTitle,
-	CourseInfoItemValue,
-} from './CourseCard.styled';
+import { CardWrapper, CourseInfo, CourseTitle } from './CourseCard.styled';
 import {
 	BUTTON_TEXT_SHOW_COURSE,
 	COURSE_CREATED_DATE_TITLE,

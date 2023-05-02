@@ -9,7 +9,7 @@ const SearchBar = ({ onChange, onClick, inputValue }) => {
 		<>
 			<form action='' onSubmit={onClick}>
 				<Input value={inputValue} onChange={onChange} />
-				<Button buttonText={BUTTON_TEXT_SEARCH} />
+				<Button buttonText={BUTTON_TEXT_SEARCH} type={'submit'} />
 			</form>
 		</>
 	);

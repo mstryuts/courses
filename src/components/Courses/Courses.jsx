@@ -24,9 +24,6 @@ const Courses = () => {
 	}
 
 	function filterCourses(event) {
-		if (inputValue === '') {
-			return courses;
-		}
 		event.preventDefault();
 		const filteredCourses = courses.filter(
 			(course) =>
