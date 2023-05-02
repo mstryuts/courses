@@ -28,8 +28,10 @@ const Courses = () => {
 			return courses;
 		}
 		event.preventDefault();
-		const filteredCourses = courses.filter((course) =>
-			course.title.toLowerCase().includes(inputValue.toLowerCase())
+		const filteredCourses = courses.filter(
+			(course) =>
+				course.title.toLowerCase().includes(inputValue.toLowerCase()) ||
+				course.id.includes(inputValue.toLowerCase())
 		);
 		setCourses(filteredCourses);
 	}
