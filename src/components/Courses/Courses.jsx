@@ -11,27 +11,24 @@ const Courses = () => {
 	const [inputValue, setInputValue] = useState('');
 
 	function getAuthorNameById(authorId) {
-		const author = MOCKED_AUTHORS_LIST.find((a) => a.id === authorId);
+		const author = authors.find((a) => a.id === authorId);
 		return author ? author.name : '';
 	}
 
-	// const coursesWithAuthors = courses.map((course) => {
-	// 	const authorNames = course.authors
-	// 		.map((authorId) => {
-	// 			const author = authors.find((a) => a.id === authorId);
-	// 			return author ? author.name : '';
-	// 		})
-	// 		.join(', ');
-	// 	return { ...course, authorNames };
-	// });
-
 	function handleInputChange(event) {
-		console.log(event);
+		if (event.target.value === '') {
+			setCourses(MOCKED_COURSES_LIST);
+		}
+		console.log(event.target.value);
 		setInputValue(event.target.value);
 	}
 
 	function filterCourses(event) {
-		const filteredCourses = MOCKED_COURSES_LIST.filter((course) =>
+		if (inputValue === '') {
+			return courses;
+		}
+		event.preventDefault();
+		const filteredCourses = courses.filter((course) =>
 			course.title.toLowerCase().includes(inputValue.toLowerCase())
 		);
 		setCourses(filteredCourses);

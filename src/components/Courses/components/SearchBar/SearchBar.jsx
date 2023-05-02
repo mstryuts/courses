@@ -7,9 +7,9 @@ import { BUTTON_TEXT_SEARCH } from 'constants';
 const SearchBar = ({ onChange, onClick, inputValue }) => {
 	return (
 		<>
-			<form action=''>
+			<form action='' onSubmit={onClick}>
 				<Input value={inputValue} onChange={onChange} />
-				<Button buttonText={BUTTON_TEXT_SEARCH} onClick={onClick} />
+				<Button buttonText={BUTTON_TEXT_SEARCH} />
 			</form>
 		</>
 	);
