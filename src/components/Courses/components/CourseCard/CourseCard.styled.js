@@ -9,6 +9,7 @@ export const CardWrapper = styled.div`
 	padding: 20px;
 	border: 2px solid black;
 	border-radius: 4px;
+	max-width: 950px;
 `;
 
 export const CourseInfo = styled.div`

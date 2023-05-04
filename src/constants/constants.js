@@ -45,7 +45,13 @@ export const MOCKED_AUTHORS_LIST = [
 export const BUTTON_TEXT_LOGOUT = 'Logout';
 export const BUTTON_TEXT_SHOW_COURSE = 'Show course';
 export const BUTTON_TEXT_SEARCH = 'Search';
+export const BUTTON_TEXT_CREATE_COURSE = 'Create Course';
+export const BUTTON_TEXT_ADD_COURSE = 'Add new course';
+
+export const BUTTON_TYPE_CREATE_COURSE = 'Create Cou1rse';
+
 export const COURSE_DURATION_TITLE = 'Duration:';
 export const COURSE_CREATED_DATE_TITLE = 'Creation Date:';
 export const COURSE_AUTHORS_TITLE = 'Authors:';
+
 export const USER_DUMMY_HEADER_NAME = 'Name';
