@@ -1,7 +1,8 @@
-const { default: styled } = require('styled-components');
+import styled from 'styled-components';
 
-export const InputStyled = styled.input`
-	width: 200px;
+export const TextareaStyled = styled.textarea`
+	width: auto;
+	height: 100px;
 	padding: 10px;
 	font-size: 16px;
 	border: 1px solid #ccc;
@@ -20,6 +21,5 @@ export const InputStyled = styled.input`
 export const LabelStyled = styled.label`
 	display: flex;
 	flex-direction: column;
-
 	gap: 15px;
 `;

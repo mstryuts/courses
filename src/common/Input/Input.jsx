@@ -1,11 +1,12 @@
 import PropTypes from 'prop-types';
-import { InputStyled } from './Input.styled';
+import { InputStyled, LabelStyled } from './Input.styled';
 
-const Input = ({ onChange, value }) => {
+const Input = ({ onChange, value, title }) => {
 	return (
-		<label>
+		<LabelStyled>
+			{title}
 			<InputStyled onChange={onChange} value={value} />
-		</label>
+		</LabelStyled>
 	);
 };
 Input.propTypes = {

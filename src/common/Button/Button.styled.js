@@ -15,6 +15,7 @@ const pulse = keyframes`
 `;
 
 const Button = styled.button`
+	flex-shrink: 0;
 	width: auto;
 	max-width: 150px;
 	background-color: black;
@@ -29,6 +30,12 @@ const Button = styled.button`
 		background-color: #0062cc;
 		animation: ${pulse} 0.5s ease-out;
 	}
+	${(props) =>
+		props.disableVerticalStretch &&
+		`
+
+	height:50px;
+  `}
 `;
 
 export default Button;

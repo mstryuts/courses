@@ -1,8 +1,15 @@
 import PropTypes from 'prop-types';
 import ButtonStyled from './Button.styled';
 
-const Button = ({ buttonText, onClick }) => {
-	return <ButtonStyled onClick={onClick}>{buttonText}</ButtonStyled>;
+const Button = ({ buttonText, onClick, disableVerticalStretch }) => {
+	return (
+		<ButtonStyled
+			disableVerticalStretch={disableVerticalStretch}
+			onClick={onClick}
+		>
+			{buttonText}
+		</ButtonStyled>
+	);
 };
 
 Button.propTypes = {

@@ -46,12 +46,17 @@ export const BUTTON_TEXT_LOGOUT = 'Logout';
 export const BUTTON_TEXT_SHOW_COURSE = 'Show course';
 export const BUTTON_TEXT_SEARCH = 'Search';
 export const BUTTON_TEXT_CREATE_COURSE = 'Create Course';
+export const BUTTON_TEXT_CREATE_AUTHOR = 'Create Author';
 export const BUTTON_TEXT_ADD_COURSE = 'Add new course';
+export const BUTTON_TEXT_ADD_AUTHOR = 'Add author';
 
 export const BUTTON_TYPE_CREATE_COURSE = 'Create Cou1rse';
 
 export const COURSE_DURATION_TITLE = 'Duration:';
 export const COURSE_CREATED_DATE_TITLE = 'Creation Date:';
 export const COURSE_AUTHORS_TITLE = 'Authors:';
+
+export const CREATE_COURSE_TITLE = 'Title:';
+export const CREATE_COURSE_DESCRIPTION = 'Description:';
 
 export const USER_DUMMY_HEADER_NAME = 'Name';

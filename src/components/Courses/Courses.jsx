@@ -17,7 +17,6 @@ const Courses = () => {
 	const [authors, setAuthors] = useState(MOCKED_AUTHORS_LIST);
 	const [inputValue, setInputValue] = useState('');
 	const [showAddCourses, setShowAddCourses] = useState(false);
-	console.log(showAddCourses);
 
 	function getAuthorNameById(authorId) {
 		const author = authors.find((a) => a.id === authorId);
