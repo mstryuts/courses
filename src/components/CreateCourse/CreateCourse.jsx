@@ -102,7 +102,6 @@ const CreateCourse = () => {
 					</AuthorsDiv>
 				</AuthorsStyledDiv>
 			</StyledDiv>
-			<DropdownSelect />
 		</>
 	);
 };
